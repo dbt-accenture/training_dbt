@@ -1,0 +1,6 @@
+packages:
+  - package: Datavault-UK/dbtvault
+    version: 0.8.3
+  - package: re-data/re_data
+    version: 0.10.6
+  
