@@ -1,5 +1,6 @@
 version: 2
 
+
 sources:
   - name: PostgreSQL
     description: This is a replica of the data source postgreSQL
@@ -26,3 +27,12 @@ sources:
             tests:
               - not_null
               
+
+models:
+  - name: total_sales
+    columns:
+      - name: product_id
+        tests:
+          - unique:
+              config:
+                store_failures: true
