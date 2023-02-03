@@ -6,3 +6,4 @@ with
 
 select *
 from staged
+order by id
