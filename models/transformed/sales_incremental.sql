@@ -1,10 +1,11 @@
 {{ config(
-            materialized='incremental'
+            materialized='incremental',
+            schema="pre_transformed"
         )
 }}
 
 select *  FROM {{source('PostgreSQL','sales_trans')}}
 {% if is_incremental() %}
   -- this filter will only be applied on an incremental run
-     where S1.TRANS_TIMESTAMP > (select max(S1.TRANS_TIMESTAMP) from {{ this }})
+     where current_timestamp > (select max(TRANS_TIMESTAMP) from {{ this }})
 {% endif %}
