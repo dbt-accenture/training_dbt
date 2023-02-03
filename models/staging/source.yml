@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: dev_dataplatform
+    schema: raw
+    tables:
+      - name: opportunity_header
+      - name: opportunity_line_item
+      - name: opportunity_fact
+    
