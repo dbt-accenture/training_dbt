@@ -36,3 +36,10 @@ models:
           - unique:
               config:
                 store_failures: true
+  - name: sales_incremental
+    columns:
+      - name: PRODUCT_ID
+        tests:
+          - unique:
+              config:
+                store_failures: true              

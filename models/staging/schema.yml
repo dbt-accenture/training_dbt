@@ -1,9 +1,10 @@
 version: 2
 
 models:
-  - name: orders
+  - name: id
     columns:
       - name: opportunity_header
         tests:
           - unique
-          - not_null
+          - not_nul
+          
