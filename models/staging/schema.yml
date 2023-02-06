@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: orders
+    columns:
+      - name: opportunity_header
+        tests:
+          - unique
+          - not_null

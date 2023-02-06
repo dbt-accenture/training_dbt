@@ -1,7 +1,6 @@
 {{ config(
             materialized='incremental',
-            schema="pre_transformed",
-            post_hook = "grant usage on schema {{this}} to role sysadmin"
+            schema="pre_transformed"
         )
 }}
 
